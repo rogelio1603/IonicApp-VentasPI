@@ -1,0 +1,7 @@
+{
+  "name": "mypi",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Ventas</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item (click)="presentarAcciones()">
+      <ion-avatar item-start>
+        <img src="https://http2.mlstatic.com/lentes-con-camara-espia-graduables-de-50-mpix-D_NQ_NP_852543-MLM26718681649_012018-F.jpg">
+      </ion-avatar>
+      <h2>Megaview</h2>
+      <p>Lentes para trabajos forzados</p>
+      <b><p>$300 pesos</p></b>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab right bottom>
+    <button ion-fab color="primary" (click)="AgregarVenta()"><ion-icon name="add"></ion-icon></button>
+
+  </ion-fab>
+</ion-content>

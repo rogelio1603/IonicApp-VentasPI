@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Ventas</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item (click)="presentarAcciones()">
+      <ion-avatar item-start>
+        <img src="https://laverdadnoticias.com/__export/1541437600877/sites/laverdad/img/2018/11/05/descarga_crop1541437570353.jpeg_793492074.jpeg">
+      </ion-avatar>
+      <h2>Chapo Guzman</h2>
+      <p>Av. Universidad 333</p>
+      <b><p>Las viboras, Tel: 3123161000</p></b>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab right bottom>
+    <button ion-fab color="primary" (click)="AgregarVenta()"><ion-icon name="add"></ion-icon></button>
+
+  </ion-fab>
+</ion-content>
