@@ -1,18 +1,26 @@
-<!--
-  Generated template for the ListarabonosPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>listarabonos</ion-title>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Abonos</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
+  <ion-list>
+    <ion-item (click)="presentarAcciones()">
+      <ion-avatar item-start>
+        <img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fmedia1.s-nbcnews.com%2Fj%2Fnewscms%2F2016_01%2F1369081%2F160109-el-chapo-guzman-mn-0930_2721e5f388bdcf9ab19e08e93fb47f86.nbcnews-fp-1200-800.jpg&f=1">
+      </ion-avatar>
+      <h2>Chapo Guzman</h2>
+      <p>Lentes para trabajos forzados</p>
+      <b><p>$100 pesitos de abono</p></b>
+    </ion-item>
+  </ion-list>
 
+  <ion-fab right bottom>
+    <button ion-fab color="primary" (click)="AgregarVenta()"><ion-icon name="add"></ion-icon></button>
+
+  </ion-fab>
 </ion-content>

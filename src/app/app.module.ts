@@ -15,6 +15,11 @@ import { ListarclientesPage } from '../pages/listarclientes/listarclientes';
 import { ListarproductosPage } from '../pages/listarproductos/listarproductos';
 import { AgregarproductosPage } from '../pages/agregarproductos/agregarproductos';
 import { DetalleproductoPage } from '../pages/detalleproducto/detalleproducto';
+import { AgregarabonoPage } from '../pages/agregarabono/agregarabono';
+import { DetalleabonoPage } from '../pages/detalleabono/detalleabono';
+import { ListarabonosPage } from '../pages/listarabonos/listarabonos';
+import { LoginPage } from '../pages/login/login';
+import { RegistrarPage } from '../pages/registrar/registrar';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,12 @@ import { DetalleproductoPage } from '../pages/detalleproducto/detalleproducto';
     ListarclientesPage,
     ListarproductosPage,
     AgregarproductosPage,
-    DetalleproductoPage
+    DetalleproductoPage,
+    AgregarabonoPage,
+    DetalleabonoPage,
+    ListarabonosPage,
+    LoginPage,
+    RegistrarPage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +54,12 @@ import { DetalleproductoPage } from '../pages/detalleproducto/detalleproducto';
     ListarclientesPage,
     ListarproductosPage,
     AgregarproductosPage,
-    DetalleproductoPage
+    DetalleproductoPage,
+    AgregarabonoPage,
+    DetalleabonoPage,
+    ListarabonosPage,
+    LoginPage,
+    RegistrarPage
   ],
   providers: [
     StatusBar,

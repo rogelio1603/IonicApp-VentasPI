@@ -6,8 +6,8 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>login</ion-title>
+  <ion-navbar color="dark">
+    <ion-title>Autenticate</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,4 +15,18 @@
 
 <ion-content padding>
 
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Correo electrónico</ion-label>
+      <ion-input type="mail" name="login.Correo"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Contraseña</ion-label>
+        <ion-input type="password" name="login.contrasena"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button full (click)="Entrar()">Entrar</button>
+
+<p>Si no te haz registrado favor de hacerlo, pulsando el siguiente botón</p>
+<button ion-button full (click)="Registrar()">Registrate aquí</button>
 </ion-content>

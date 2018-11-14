@@ -6,13 +6,35 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>registrar</ion-title>
+  <ion-navbar color="dark">
+    <ion-title>Favor de capturar tus datos</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+<ion-list>
+  <ion-item>
+    <ion-label floating>Nombre</ion-label>
+    <ion-input type="text" name="registrar.Nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label floating>Dirección</ion-label>
+      <ion-input type="text" name="registrar.Dirección"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Teléfono</ion-label>
+        <ion-input type="text" name="registrar.telefono"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>Correo</ion-label>
+          <ion-input type="mail" name="registrar.Correo"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Contraseña</ion-label>
+            <ion-input type="password" name="registrar.contrasena"></ion-input>
+          </ion-item>
+</ion-list>
+<button ion-button full color="secundary" (click)="Guardar()">Guardar</button>
 </ion-content>

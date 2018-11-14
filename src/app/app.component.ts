@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { AgregarventaPage } from '../pages/agregarventa/agregarventa';
 import { ListarclientesPage } from '../pages/listarclientes/listarclientes';
 import { ListarproductosPage } from '../pages/listarproductos/listarproductos';
+import { ListarabonosPage } from '../pages/listarabonos/listarabonos';
 
 
 
@@ -27,7 +28,8 @@ export class MyApp {
     this.pages = [
       { title: 'Ventas', component: HomePage },
       { title: 'Clientes', component: ListarclientesPage },
-      { title: 'Productos', component: ListarproductosPage }
+      { title: 'Productos', component: ListarproductosPage },
+      { title: 'Abonos', component: ListarabonosPage }
     ];
 
   }

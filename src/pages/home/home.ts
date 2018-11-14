@@ -4,6 +4,8 @@ import { ActionSheetController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { AgregarventaPage } from '../../pages/agregarventa/agregarventa';
 import { DetalleventaPage } from '../../pages/detalleventa/detalleventa';
+import { ModalController } from 'ionic-angular';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-home',
@@ -13,8 +15,15 @@ export class HomePage {
 
   constructor(public navCtrl: NavController,
     public actionSheetCtrl: ActionSheetController,
-    public alertCtrl: AlertController){
+    public alertCtrl: AlertController,
+    public modalCtrl : ModalController){
 
+    }
+
+    ionViewDidLoad() {
+      // Put here the code you want to execute
+      const modal =this.modalCtrl.create(LoginPage);
+      modal.present();
     }
 
     AgregarVenta(){

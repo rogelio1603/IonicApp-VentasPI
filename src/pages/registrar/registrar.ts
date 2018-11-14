@@ -18,6 +18,10 @@ export class RegistrarPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  Guardar(){
+    this.navCtrl.pop();
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegistrarPage');
   }
