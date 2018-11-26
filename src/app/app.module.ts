@@ -20,6 +20,7 @@ import { DetalleabonoPage } from '../pages/detalleabono/detalleabono';
 import { ListarabonosPage } from '../pages/listarabonos/listarabonos';
 import { LoginPage } from '../pages/login/login';
 import { RegistrarPage } from '../pages/registrar/registrar';
+import { NegocioProvider } from '../providers/negocio/negocio';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { RegistrarPage } from '../pages/registrar/registrar';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    NegocioProvider
   ]
 })
 export class AppModule {}
