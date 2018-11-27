@@ -24,6 +24,7 @@ import { NegocioProvider } from '../../providers/negocio/negocio'
 
 @Component({
 
+<<<<<<< HEAD
   selector: 'page-agregarproductos',
 
   templateUrl: 'agregarproductos.html',
@@ -32,6 +33,16 @@ import { NegocioProvider } from '../../providers/negocio/negocio'
 
 export class AgregarproductosPage {
 
+=======
+  selector: 'page-agregarproducto',
+
+  templateUrl: 'agregarproducto.html',
+
+})
+
+export class AgregarproductoPage {
+
+>>>>>>> effb9bbdb98727054ea0f550633305606458dba9
  
 
   mensaje:any;
@@ -48,7 +59,11 @@ export class AgregarproductosPage {
 
   ionViewDidLoad() {
 
+<<<<<<< HEAD
     console.log('ionViewDidLoad AgregarproductosPage');
+=======
+    console.log('ionViewDidLoad AgregarproductoPage');
+>>>>>>> effb9bbdb98727054ea0f550633305606458dba9
 
   }
 

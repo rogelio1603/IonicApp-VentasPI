@@ -21,7 +21,10 @@ import { ListarabonosPage } from '../pages/listarabonos/listarabonos';
 import { LoginPage } from '../pages/login/login';
 import { RegistrarPage } from '../pages/registrar/registrar';
 import { NegocioProvider } from '../providers/negocio/negocio';
+<<<<<<< HEAD
 import { HttpClientModule } from '@angular/common/http';
+=======
+>>>>>>> effb9bbdb98727054ea0f550633305606458dba9
 
 @NgModule({
   declarations: [
