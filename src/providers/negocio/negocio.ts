@@ -36,13 +36,13 @@ export class NegocioProvider {
 
   {
 
-    var uri="https://dp2018.000webhostapp.com/ionic/actualizarproducto.php?nombre="+registro.nombre
+    var uri="http://localhost/providers/actualizarproducto.php?nombre="+registro.nombre
 
               +"&cantidad="+registro.cantidad
 
-              +"&preciodeventa="+registro.preciodeventa
+              +"&precioventa="+registro.precioventa
 
-              +"&preciodecosto="+registro.preciodecosto
+              +"&preciocosto="+registro.preciocosto
 
               +"&descripcion="+registro.descripcion
 
@@ -64,17 +64,19 @@ export class NegocioProvider {
 
   {
 
-    var uri="https://dp2018.000webhostapp.com/ionic/agregarproducto.php?nombre="+registro.nombre
+    var uri="http://localhost/providers/agregarproducto.php?nombre="+registro.nombre
 
               +"&cantidad="+registro.cantidad
 
-              +"&preciodeventa="+registro.preciodeventa
+              +"&precioventa="+registro.precioventa
 
-              +"&preciodecosto="+registro.preciodecosto
+              +"&preciocosto="+registro.preciocosto
 
               +"&descripcion="+registro.descripcion
 
-              +"&fotografia="+registro.fotografia;
+              +"&fotografia="+registro.fotografia
+
+              +"&idvendedor="+1;
 
               var encoded = encodeURI(uri); 
 
@@ -92,7 +94,7 @@ export class NegocioProvider {
 
    
 
-    return this.http.get('https://dp2018.000webhostapp.com/ionic/eliminarproducto.php?idproducto='+idproducto);
+    return this.http.get('http://localhost/providers/eliminarproducto.php?idproducto='+idproducto);
 
   
 
@@ -106,7 +108,7 @@ export class NegocioProvider {
 
    
 
-    return this.http.get('https://dp2018.000webhostapp.com/ionic/listarproductos.php');
+    return this.http.get('http://localhost/providers/listarproductos.php');
 
     //return this.http.get('https://randomuser.me/api/?results=25');
 
