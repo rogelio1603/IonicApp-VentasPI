@@ -6,9 +6,11 @@ import { NegocioProvider } from '../../providers/negocio/negocio'
 
 import { ModalController } from 'ionic-angular';
 
-import { AgregarproductoPage } from '../../pages/agregarproductos/agregarproductos';
+
+import { AgregarproductosPage } from '../../pages/agregarproductos/agregarproductos';
 
 import { DetalleproductoPage } from '../../pages/detalleproducto/detalleproducto';
+
 
 import { ActionSheetController } from 'ionic-angular';
 
@@ -180,6 +182,7 @@ export class ListarproductosPage {
 
     this.cargarProductos();
 
+
 }
 
  
@@ -190,7 +193,7 @@ export class ListarproductosPage {
 
  
 
-    this.navCtrl.push(AgregarproductoPage);
+    this.navCtrl.push(AgregarproductosPage);
 
  
 
@@ -321,6 +324,16 @@ export class ListarproductosPage {
     });
 
     actionSheet.present();
+
+
+
+
+ 
+
+ 
+
   }
+
+ 
 
 }

@@ -24,13 +24,14 @@ import { NegocioProvider } from '../../providers/negocio/negocio'
 
 @Component({
 
-  selector: 'page-agregarproducto',
 
-  templateUrl: 'agregarproducto.html',
+  selector: 'page-agregarproductos',
+
+  templateUrl: 'agregarproductos.html',
 
 })
 
-export class AgregarproductoPage {
+export class AgregarproductosPage {
 
  
 
@@ -48,7 +49,8 @@ export class AgregarproductoPage {
 
   ionViewDidLoad() {
 
-    console.log('ionViewDidLoad AgregarproductoPage');
+
+    console.log('ionViewDidLoad AgregarproductosPage');
 
   }
 

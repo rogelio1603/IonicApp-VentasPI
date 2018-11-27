@@ -21,6 +21,8 @@ import { ListarabonosPage } from '../pages/listarabonos/listarabonos';
 import { LoginPage } from '../pages/login/login';
 import { RegistrarPage } from '../pages/registrar/registrar';
 import { NegocioProvider } from '../providers/negocio/negocio';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -42,6 +44,7 @@ import { NegocioProvider } from '../providers/negocio/negocio';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
