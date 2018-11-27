@@ -20,6 +20,8 @@ import { DetalleabonoPage } from '../pages/detalleabono/detalleabono';
 import { ListarabonosPage } from '../pages/listarabonos/listarabonos';
 import { LoginPage } from '../pages/login/login';
 import { RegistrarPage } from '../pages/registrar/registrar';
+import { NegocioProvider } from '../providers/negocio/negocio';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,7 @@ import { RegistrarPage } from '../pages/registrar/registrar';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -64,7 +67,8 @@ import { RegistrarPage } from '../pages/registrar/registrar';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    NegocioProvider
   ]
 })
 export class AppModule {}

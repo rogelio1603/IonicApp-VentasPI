@@ -1,26 +1,49 @@
 <ion-header>
+
   <ion-navbar color="primary">
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Listar Productos</ion-title>
+
+    <ion-title>
+
+      Productos
+
+    </ion-title>
+
   </ion-navbar>
+
 </ion-header>
 
-<ion-content padding>
-  <ion-list>
-    <ion-item (click)="presentarAcciones()">
-      <ion-avatar item-start>
-        <img src="http://elestimulo.com/bienmesabe/wp-content/uploads/sites/7/2015/08/lim%C3%B3n.jpg">
-      </ion-avatar>
-      <h2>Limón español</h2>
-      <p>En bolsas de a kilo</p>
-      <b><p>$30 pesos</p></b>
-    </ion-item>
-  </ion-list>
+ 
 
-  <ion-fab right bottom>
-    <button ion-fab color="primary" (click)="AgregarVenta()"><ion-icon name="add"></ion-icon></button>
+<ion-content padding>
+
+  <ion-fab right bottom (click)="openModal()">
+
+    <button ion-fab color="primary"><ion-icon name="add" ></ion-icon></button>
 
   </ion-fab>
+
+  <ion-list>
+
+    <ion-item *ngFor="let producto of productos" (click)="openDetalle(producto)">
+
+        <ion-avatar item-start>
+
+            <img src="{{producto.fotografia}}">
+
+          </ion-avatar>
+
+      <h1>{{ producto.nombre }}</h1>
+
+      <h3>{{producto.descripcion}}</h3>
+
+      <h2>${{producto.preciodeventa}}</h2>
+
+    </ion-item>
+
+  </ion-list>
+
+ 
+
+   
+
 </ion-content>
