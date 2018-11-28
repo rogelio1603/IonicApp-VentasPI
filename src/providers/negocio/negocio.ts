@@ -31,12 +31,13 @@ export class NegocioProvider {
   }
 
  
+/*Productos*/
 
   updateProducto(registro)
 
   {
 
-    var uri="http://localhost/providers/actualizarproducto.php?nombre="+registro.nombre
+    var uri="http://localhost/providers/producto/actualizarproducto.php?nombre="+registro.nombre
 
               +"&cantidad="+registro.cantidad
 
@@ -64,7 +65,7 @@ export class NegocioProvider {
 
   {
 
-    var uri="http://localhost/providers/agregarproducto.php?nombre="+registro.nombre
+    var uri="http://localhost/providers/producto/agregarproducto.php?nombre="+registro.nombre
 
               +"&cantidad="+registro.cantidad
 
@@ -94,7 +95,7 @@ export class NegocioProvider {
 
    
 
-    return this.http.get('http://localhost/providers/eliminarproducto.php?idproducto='+idproducto);
+    return this.http.get('http://localhost/providers/producto/eliminarproducto.php?idproducto='+idproducto);
 
   
 
@@ -108,12 +109,94 @@ export class NegocioProvider {
 
    
 
-    return this.http.get('http://localhost/providers/listarproductos.php');
+    return this.http.get('http://localhost/providers/producto/listarproductos.php');
 
     //return this.http.get('https://randomuser.me/api/?results=25');
 
   }
 
+ /*Finaliza*/
+
+ /*Cliente*/
+
+ updateCliente(registro)
+
+ {
+
+   var uri="http://localhost/providers/cliente/actualizarcliente.php?nombre="+registro.nombre
+
+             +"&direccion="+registro.direccion
+
+             +"&telefono="+registro.telefono
+
+             +"&correo="+registro.correo
+
+             +"&fotografia="+registro.fotografia
+
+             +"&idcliente="+registro.idcliente;
+
+             var encoded = encodeURI(uri); 
+
+         //    alert("encoded="+encoded) ;     
+
+   return this.http.get(encoded);
+
+ }
+
+
+
+ putCliente(registro)
+
+ {
+
+   var uri="http://localhost/providers/cliente/agregarcliente.php?nombre="+registro.nombre
+
+            +"&direccion="+registro.direccion
+
+            +"&telefono="+registro.telefono
+
+            +"&correo="+registro.correo
+
+            +"&fotografia="+registro.fotografia
+
+            +"&idvendedor="+1;
+
+             var encoded = encodeURI(uri); 
+
+         //    alert("encoded="+encoded) ;     
+
+   return this.http.get(encoded);
+
+ }
+
+
+
+ deleteCliente(idcliente)
+
+ {
+
+  
+
+   return this.http.get('http://localhost/providers/cliente/eliminarcliente.php?idcliente='+idcliente);
+
  
+
+ }
+
+
+
+ getCliente()
+
+ {
+
+  
+
+   return this.http.get('http://localhost/providers/cliente/listarcliente.php');
+
+   //return this.http.get('https://randomuser.me/api/?results=25');
+
+ }
+
+ /*Finaliza*/
 
 }

@@ -6,39 +6,94 @@
 -->
 <ion-header>
 
-    <ion-navbar color="dark">
-      <ion-title>Detalle cliente</ion-title>
-      <ion-buttons end>
-          <button ion-button icon-only>
-            <ion-icon name="md-checkmark"></ion-icon>
-          </button>
-        </ion-buttons>
-    </ion-navbar>
-  
-  </ion-header>
-  
-  
-  <ion-content padding>
+ 
+
+  <ion-navbar color="secondary">
+
+    <ion-title>Edición del Cliente</ion-title>
+
+    <ion-buttons end navPop>
+
+        <button ion-button icon-only (click)="ActualizarCliente()">
+
+          <ion-icon name="md-checkmark"></ion-icon>
+
+        </button>
+
+      </ion-buttons>
+
+  </ion-navbar>
+
+ 
+
+</ion-header>
+
+ 
+
+<ion-content padding>
+
     <form>
-      <ion-list>
-        <ion-item>
+
+        <ion-list>
+
+          <ion-item>
+
           <ion-label floating>Nombre</ion-label>
-          <ion-input type="text" name="cliente.Nombre"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label floating>Dirección</ion-label>
-            <ion-input type="text" name="cliente.Dirección"></ion-input>
+
+          <ion-input name="nombre" type="text" [(ngModel)]="cliente.nombre" clearInput></ion-input>
+
           </ion-item>
+
+     
+
           <ion-item>
-              <ion-label floating>Teléfono</ion-label>
-              <ion-input type="text" name="cliente.Teléfono"></ion-input>
+
+          <ion-label floating>Direccion</ion-label>
+
+          <ion-input name="direccion" type="text" [(ngModel)]="cliente.direccion" clearInput></ion-input>
+
           </ion-item>
+
+         
+
           <ion-item>
-              <ion-label floating>Correo</ion-label>
-              <ion-input type="mail" name="cliente.Correo"></ion-input>
+
+          <ion-label floating>Telefono</ion-label>
+
+          <ion-input name="telefono" type="number" [(ngModel)]="cliente.telefono" clearInput></ion-input>
+
           </ion-item>
-      </ion-list>
-    </form>
-  
-  </ion-content>
-  
+
+         
+
+          <ion-item>
+
+          <ion-label floating>Correo</ion-label>
+
+          <ion-input name="correo" type="text" [(ngModel)]="cliente.correo" clearInput></ion-input>
+
+          </ion-item>
+
+          <ion-item>
+
+            <ion-label floating>URL de fotografía</ion-label>
+
+            <ion-input name="fotografia" type="text" [(ngModel)]="cliente.fotografia" clearInput></ion-input>
+
+            </ion-item>
+
+          <ion-item>
+
+            <img src="{{cliente.fotografia}}">
+
+          </ion-item>
+
+        </ion-list>
+
+      </form>
+
+      <p>{{clientex|json}}</p>
+
+     
+
+</ion-content>
