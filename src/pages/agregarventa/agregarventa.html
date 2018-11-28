@@ -6,12 +6,12 @@
 -->
 <ion-header>
 
-  <ion-navbar color="primary">
+  <ion-navbar color="dark">
     <ion-title>Nueva venta</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only>
-        <ion-icon name="md-checkmark"></ion-icon>
-      </button>
+        <button ion-button icon-only (click)="AgregarVenta()">
+            <ion-icon name="md-checkmark"></ion-icon>
+        </button>
     </ion-buttons>
   </ion-navbar>
 
@@ -20,38 +20,68 @@
 
 <ion-content padding>
 <form>
-  <ion-list>
-    <ion-item>
-      <ion-label floating>Fecha</ion-label>
-      <ion-input type="date" name="fecha"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Producto</ion-label>
-      <ion-input type="button" name="producto"></ion-input>
-    </ion-item>
-    <ion-item>
-      <button ion-button full color="secondary">Seleccionar Cliente</button>
-    </ion-item>
-  </ion-list>
+<ion-list>
+	<ion-item>
+    <ion-label>Fecha</ion-label>
+    <ion-datetime displayFormat="MM/DD/YYYY" name="fecha" [(ngModel)]="fecha"></ion-datetime>
+  </ion-item>
 
-    <ion-list radio-group>
-    <ion-list-header>Tipo de venta</ion-list-header>
-    <ion-item>
-      <ion-label>Contado</ion-label>
-      <ion-radio checked="true" value="go"></ion-radio>
-    </ion-item>
-    <ion-item>
-      <ion-label>En abonos</ion-label>
-      <ion-radio value="rust"></ion-radio>
-    </ion-item>
-  </ion-list>
+	<ion-item>
+    <button ion-button full color="primary" (click)="PickCliente()"> Selecciona el cliente </button>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" name="ncliente" [readonly]="isReadonly()" [(ngModel)]="ncliente" clearInput> </ion-input>
+  </ion-item>
 
-  <ion-list>
-    <ion-item>
-      <ion-label>Producto pagado</ion-label>
-      <ion-checkbox color="dark" checked="true"></ion-checkbox>
-    </ion-item>
-  </ion-list>
+	<ion-item>
+		<button ion-button full color="primary" (click)="PickProducto()"> Selecciona el producto </button>
+	</ion-item>
+  <ion-item>
+    <ion-input type="text" name="nproducto" [readonly]="isReadonly()" [(ngModel)]="nproducto" clearInput> </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Cantidad</ion-label>
+    <ion-select (ionChange)="CalcularPago()" name="cantidad" [(ngModel)]="cantidad">
+      <ion-option value="1">1</ion-option>
+      <ion-option value="2">2</ion-option>
+      <ion-option value="3">3</ion-option>
+      <ion-option value="4">4</ion-option>
+      <ion-option value="5">5</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Total a pagar </ion-label>
+    <ion-label>${{totalapagar}}</ion-label>
+  </ion-item>
+</ion-list>
+
+<br><br>
+
+<ion-list radio-group>
+
+  <ion-list-header>
+    Tipo de venta
+  </ion-list-header>
+
+  <ion-item>
+    <ion-label>Al contado</ion-label>
+    <ion-radio value="contado" checked="true" (ionSelect)="PagoEnAbonos(false)"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>En abonos</ion-label>
+    <ion-radio value="abonos" (ionSelect)="PagoEnAbonos(true)"></ion-radio>
+  </ion-item>
+ </ion-list>
+
+<ion-item>
+  <ion-label>Pagado</ion-label>
+  <ion-checkbox color="primary" checked="false" (click)="ToggleCheckbox()"></ion-checkbox>
+</ion-item>
 
 </form>
+
+
 </ion-content>

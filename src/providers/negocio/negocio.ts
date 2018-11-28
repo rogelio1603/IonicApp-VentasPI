@@ -199,4 +199,92 @@ export class NegocioProvider {
 
  /*Finaliza*/
 
+ /*Ventas*/
+
+ updateVenta(registro)
+
+ {
+
+   var uri="http://localhost/providers/venta/actualizarventa.php?fecha="+registro.fecha
+
+             +"&idproducto="+registro.idproducto
+
+             +"&idcliente="+registro.idcliente
+
+             +"&cantidad="+registro.cantidad
+
+             +"&totalapagar="+registro.totalapagar
+
+             +"&pagoenabonos="+registro.pagoenabonos
+
+             +"&pagado="+registro.pagado
+             
+             +"&idventa="+registro.idventa;
+
+             var encoded = encodeURI(uri); 
+
+         //    alert("encoded="+encoded) ;     
+
+   return this.http.get(encoded);
+
+ }
+
+
+
+ putVenta(registro)
+
+ {
+
+   var uri="http://localhost/providers/venta/agregarventa.php?fecha="+registro.fecha
+
+            +"&idproducto="+registro.idproducto
+
+            +"&idcliente="+registro.idcliente
+
+            +"&cantidad="+registro.cantidad
+
+            +"&totalapagar="+registro.totalapagar
+
+            +"&pagoenabonos="+registro.pagoenabonos
+
+            +"&pagado="+registro.pagado;
+
+             var encoded = encodeURI(uri); 
+
+         //    alert("encoded="+encoded) ;     
+
+   return this.http.get(encoded);
+
+ }
+
+
+
+ deleteVenta(idventa)
+
+ {
+
+  
+
+   return this.http.get('http://localhost/providers/venta/eliminarventa.php?idventa='+idventa);
+
+ 
+
+ }
+
+
+
+ getVenta()
+
+ {
+
+  
+
+   return this.http.get('http://localhost/providers/venta/listarventa.php');
+
+   //return this.http.get('https://randomuser.me/api/?results=25');
+
+ }
+
+ /*Finaliza*/
+
 }
